@@ -152,7 +152,6 @@ endfunction
 function! s:input_parser(line, current_file, root) abort " {{{1
   " Handle \space commands
   let l:file = substitute(a:line, '\\space\s*', ' ', 'g')
-  unsilent echo 'x' a:line
 
   " Handle import package commands
   if l:file =~# g:vimtex#re#tex_input_import
