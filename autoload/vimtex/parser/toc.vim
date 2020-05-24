@@ -171,6 +171,7 @@ let s:matcher_include = {
 function! s:matcher_include.get_entry(context) abort dict " {{{1
   let l:file = matchstr(a:context.line, self.re)
   if !vimtex#paths#is_abs(l:file[0])
+    " Handle import and subfile package commands
     let l:root = a:context.line =~# '\\sub'
           \ ? fnamemodify(a:context.file, ':p:h')
           \ : b:vimtex.root

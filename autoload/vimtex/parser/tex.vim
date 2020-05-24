@@ -153,9 +153,8 @@ function! s:input_parser(line, current_file, root) abort " {{{1
   " Handle \space commands
   let l:file = substitute(a:line, '\\space\s*', ' ', 'g')
 
-  " Handle import package commands
+  " Handle import and subfile package commands
   if l:file =~# g:vimtex#re#tex_input_import
-        \ || l:file =~# 'subfile'
     let l:root = l:file =~# '\\sub'
           \ ? fnamemodify(a:current_file, ':p:h')
           \ : a:root
