@@ -1782,6 +1782,13 @@ OPTIONS                                                        *vimtex-options*
 <
   Default value: {}
 
+*g:vimtex_mappings_override_global*
+  Control whether or not to override pre-existing global mappings, if the
+  vimtex mapping conflicts with an existing global mapping that uses the same
+  sequence of keys.
+
+  Default value: 0
+
 *g:vimtex_matchparen_enabled*
   Enable highlighting of matching delimiters.
 
